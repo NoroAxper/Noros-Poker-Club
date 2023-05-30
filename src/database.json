@@ -1,0 +1,324 @@
+{
+  "users": [
+    {
+      "username": "noroaxper",
+      "password": "hello123",
+      "bank": 400,
+      "id": 1
+    }
+  ],
+  "cards": [
+    {
+      "value": "A",
+      "type": "spade",
+      "id": 1,
+      "lock": false
+    },
+    {
+      "value": "2",
+      "type": "spade",
+      "id": 2,
+      "lock": false
+    },
+    {
+      "value": "3",
+      "type": "spade",
+      "id": 3,
+      "lock": false
+    },
+    {
+      "value": "4",
+      "type": "spade",
+      "id": 4,
+      "lock": false
+    },
+    {
+      "value": "5",
+      "type": "spade",
+      "id": 5,
+      "lock": false
+    },
+    {
+      "value": "6",
+      "type": "spade",
+      "id": 6,
+      "lock": false
+    },
+    {
+      "value": "7",
+      "type": "spade",
+      "id": 7,
+      "lock": false
+    },
+    {
+      "value": "8",
+      "type": "spade",
+      "id": 8,
+      "lock": false
+    },
+    {
+      "value": "9",
+      "type": "spade",
+      "id": 9,
+      "lock": false
+    },
+    {
+      "value": "10",
+      "type": "spade",
+      "id": 10,
+      "lock": false
+    },
+    {
+      "value": "J",
+      "type": "spade",
+      "id": 11,
+      "lock": false
+    },
+    {
+      "value": "Q",
+      "type": "spade",
+      "id": 12,
+      "lock": false
+    },
+    {
+      "value": "K",
+      "type": "spade",
+      "id": 13,
+      "lock": false
+    },
+    {
+      "value": "A",
+      "type": "heart",
+      "id": 14,
+      "lock": false
+    },
+    {
+      "value": "2",
+      "type": "heart",
+      "id": 15,
+      "lock": false
+    },
+    {
+      "value": "3",
+      "type": "heart",
+      "id": 16,
+      "lock": false
+    },
+    {
+      "value": "4",
+      "type": "heart",
+      "id": 17,
+      "lock": false
+    },
+    {
+      "value": "5",
+      "type": "heart",
+      "id": 18,
+      "lock": false
+    },
+    {
+      "value": "6",
+      "type": "heart",
+      "id": 19,
+      "lock": false
+    },
+    {
+      "value": "7",
+      "type": "heart",
+      "id": 20,
+      "lock": false
+    },
+    {
+      "value": "8",
+      "type": "heart",
+      "id": 21,
+      "lock": false
+    },
+    {
+      "value": "9",
+      "type": "heart",
+      "id": 22,
+      "lock": false
+    },
+    {
+      "value": "10",
+      "type": "heart",
+      "id": 23,
+      "lock": false
+    },
+    {
+      "value": "J",
+      "type": "heart",
+      "id": 24,
+      "lock": false
+    },
+    {
+      "value": "Q",
+      "type": "heart",
+      "id": 25,
+      "lock": false
+    },
+    {
+      "value": "K",
+      "type": "heart",
+      "id": 26,
+      "lock": false
+    },
+    {
+      "value": "A",
+      "type": "diamond",
+      "id": 27,
+      "lock": false
+    },
+    {
+      "value": "2",
+      "type": "diamond",
+      "id": 28,
+      "lock": false
+    },
+    {
+      "value": "3",
+      "type": "diamond",
+      "id": 29,
+      "lock": false
+    },
+    {
+      "value": "4",
+      "type": "diamond",
+      "id": 30,
+      "lock": false
+    },
+    {
+      "value": "5",
+      "type": "diamond",
+      "id": 31,
+      "lock": false
+    },
+    {
+      "value": "6",
+      "type": "diamond",
+      "id": 32,
+      "lock": false
+    },
+    {
+      "value": "7",
+      "type": "diamond",
+      "id": 33,
+      "lock": false
+    },
+    {
+      "value": "8",
+      "type": "diamond",
+      "id": 34,
+      "lock": false
+    },
+    {
+      "value": "9",
+      "type": "diamond",
+      "id": 35,
+      "lock": false
+    },
+    {
+      "value": "10",
+      "type": "diamond",
+      "id": 36,
+      "lock": false
+    },
+    {
+      "value": "J",
+      "type": "diamond",
+      "id": 37,
+      "lock": false
+    },
+    {
+      "value": "Q",
+      "type": "diamond",
+      "id": 38,
+      "lock": false
+    },
+    {
+      "value": "K",
+      "type": "diamond",
+      "id": 39,
+      "lock": false
+    },
+    {
+      "value": "A",
+      "type": "club",
+      "id": 40,
+      "lock": false
+    },
+    {
+      "value": "2",
+      "type": "club",
+      "id": 41,
+      "lock": false
+    },
+    {
+      "value": "3",
+      "type": "club",
+      "id": 42,
+      "lock": false
+    },
+    {
+      "value": "4",
+      "type": "club",
+      "id": 43,
+      "lock": false
+    },
+    {
+      "value": "5",
+      "type": "club",
+      "id": 44,
+      "lock": false
+    },
+    {
+      "value": "6",
+      "type": "club",
+      "id": 45,
+      "lock": false
+    },
+    {
+      "value": "7",
+      "type": "club",
+      "id": 46,
+      "lock": false
+    },
+    {
+      "value": "8",
+      "type": "club",
+      "id": 47,
+      "lock": false
+    },
+    {
+      "value": "9",
+      "type": "club",
+      "id": 48,
+      "lock": false
+    },
+    {
+      "value": "10",
+      "type": "club",
+      "id": 49,
+      "lock": false
+    },
+    {
+      "value": "J",
+      "type": "club",
+      "id": 50,
+      "lock": false
+    },
+    {
+      "value": "Q",
+      "type": "club",
+      "id": 51,
+      "lock": false
+    },
+    {
+      "value": "K",
+      "type": "club",
+      "id": 52,
+      "lock": false
+    }
+  ]
+}
