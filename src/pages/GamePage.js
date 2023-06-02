@@ -3,52 +3,65 @@ import CardDraw from "../components/CardDraw"
 import PrizeList from "../components/PrizeList"
 import Title from "../components/Title"
 import { useParams, Link } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import UserContext from "../components/UserContext"
 
 const chosenCards = [    {
     value: "A",
-    type: "heart",
-    id: 1,
-    lock: false
-  },    {
-    value: "A",
     type: "diamond",
-    id: 14,
-    lock: false
+    id: 1,
+    lock: false,
+    strength: 14
   },    {
     value: "K",
-    type: "heart",
-    id: 27,
-    lock: false
+    type: "diamond",
+    id: 14,
+    lock: false,
+    strength: 13
   },    {
     value: "Q",
-    type: "heart",
-    id: 40,
-    lock: false
+    type: "diamond",
+    id: 27,
+    lock: false,
+    strength: 12
   },    {
     value: "J",
-    type: "heart",
+    type: "diamond",
+    id: 40,
+    lock: false,
+    strength: 11
+  },    {
+    value: "10",
+    type: "diamond",
     id: 28,
-    lock: false
+    lock: false,
+    strength: 10
   }]
+const prizes =  {
+    winner: false,
+    reward: 0,
+    twoPair: false,
+    threeOfaKind: false,
+    straight: false,
+    flush: false,
+    fullHouse: false,
+    fourOfaKind: false,
+    straightFlush: false,
+    royalFlush: false}
 
 export default function GamePage () {
-    const [user, setUser] = useState([])
-    const [cards, setCards] = useState([])
     const [fiveCards, setFiveCards] = useState([])
     const params = useParams()
     const [buttonTexts, setButtonTexts] = useState(Array(5).fill('LOCK'));
     const [stake, setStake] = useState(0)
+    const [prize, setPrize] = useState(prizes)
+    const { user, setUser } = useContext(UserContext)
 
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_dataStoreUrl}/users`)
         .then(res => res.json())
         .then(data => data.find(item => item.username === params.username ? setUser(item): console.log('no matching user')))
-
-        fetch(`${process.env.REACT_APP_dataStoreUrl}/cards`)
-        .then(res => res.json())
-        .then(data => setCards(data))
     }, []) 
     
     const numGenerator = () => {
@@ -66,36 +79,38 @@ export default function GamePage () {
     }
     const countCardTypes = (array, type) => {
         let counter = 0
-        console.log(array)
-        console.log(type)
-        array.map(ty => {
+        array.forEach(ty => {
             if(type === ty){
                 counter++;
             }
         })
-        console.log(counter)
         return counter
     }
-    const checkForFlush = (fiveCardsTypes) => {
+    const checkForStraightsOrFlushes = (fiveCardsStrength, fiveCardsTypes) => {
+        const fiveCardsInOrder = fiveCardsStrength.sort((a, b) => a - b)
         let num = countCardTypes(fiveCardsTypes, fiveCardsTypes[0])
-        if(num === 5){
-            setUser({...user, bank: user.bank + (stake * 5)})
+        let num0 = fiveCardsInOrder[0]
+        let num1 = fiveCardsInOrder[1]
+        let num2 = fiveCardsInOrder[2]
+        let num3 = fiveCardsInOrder[3]
+        let num4 = fiveCardsInOrder[4]
+        if((num0 + 1) === num1 && (num1 + 1) === num2 && (num2 + 1) === num3 && (num3 + 1) === num4 && num !== 5){
+            setPrize({...prize, straight: true, winner: true, reward: stake * 4})
         }
-        
+        else if(num === 5 && num0 !== 10){
+            setPrize({...prize, flush: true, winner: true, reward: stake * 5})
+        }
+        else if((num0 - 9) === num1 && (num1 + 1) === num2 && (num2 + 1) === num3 && (num3 + 1) === num4 && num === 5){
+            setPrize({...prize, straightFlush: true, winner: true, reward: stake * 50})
+        }
+        else if((num0 + 1) === num1 && (num1 + 1) === num2 && (num2 + 1) === num3 && (num3 + 1) === num4 && num === 5 && num0 === 10){
+            setPrize({...prize, royalFlush: true, winner: true, reward: stake * 100})
+        }
     }
-    const countCards = (array, value) => {
-        let counter = 0
-        array.forEach(val => {
-            if(val === value){
-                counter++;
-            }
-        })
-        return counter
-    }
-    const checkForPairsTripsQuadsFull = (fiveCardsValue, quadruple, triple, twoPairs) => {
+    const checkForPairsTripsQuads = (fiveCardsValue, quadruple, triple, twoPairs) => {
         for(let i = 0; i < 5; i++){
                     
-            let num = countCards(fiveCardsValue, fiveCardsValue[i])
+            let num = countCardTypes(fiveCardsValue, fiveCardsValue[i])
             if(num === 2){
                 twoPairs.push(num)
             }
@@ -108,26 +123,27 @@ export default function GamePage () {
 
         }
         if(twoPairs.length === 4){
-            setUser({...user, bank: user.bank + (stake * 2)})
+            setPrize({...prize, twoPair: true, winner: true, reward: stake * 2})
         }
         else if(triple.length === 3 && twoPairs.length !== 2){
-            setUser({...user, bank: user.bank + (stake * 3)})
+            setPrize({...prize, threeOfaKind: true, winner: true, reward: stake * 3})
         }
         else if(triple.length === 3 && twoPairs.length === 2){
-            setUser({...user, bank: user.bank + (stake * 7)})
+            setPrize({...prize, fullHouse: true, winner: true, reward: stake * 7})
         }
         else if(quadruple.length === 4){
-            setUser({...user, bank: user.bank + (stake * 20)})
+            setPrize({...prize, fourOfaKind: true, winner: true, reward: stake * 20})
         }
     }
     const checkForPrize = (array) => {
         const fiveCardsValue = array.map(obj => obj.value)
         const fiveCardsTypes = array.map(obj => obj.type)
+        const fiveCardsStrength = array.map(obj => obj.strength)
         const twoPairs = []
         const triple = []
         const quadruple = []
-        checkForPairsTripsQuadsFull(fiveCardsValue, quadruple, triple, twoPairs)
-        checkForFlush(fiveCardsTypes)
+        checkForPairsTripsQuads(fiveCardsValue, quadruple, triple, twoPairs)
+        checkForStraightsOrFlushes(fiveCardsStrength, fiveCardsTypes)
     }
     const fetchData = async (id) => {
         const response = await fetch(`${process.env.REACT_APP_dataStoreUrl}/cards/${id}`);
@@ -166,8 +182,8 @@ export default function GamePage () {
                     else newArray.push(fiveCards[index])
                 });
 
-                setFiveCards(chosenCards)
-                checkForPrize(chosenCards)
+                setFiveCards(newArray)
+                checkForPrize(newArray)
 
             };
             fetchAllData()
@@ -187,7 +203,8 @@ export default function GamePage () {
             </div>
             <PrizeList/>
             <CardDraw fiveCards={fiveCards} setFiveCards={setFiveCards} setButtonTexts={setButtonTexts} buttonTexts={buttonTexts} />
-            <Operator stake={stake} setStake={setStake} fiveCards={fiveCards} createCard={createCard} user={user} setUser={setUser} setButtonTexts={setButtonTexts}/>
+
+            <Operator prize={prize} setPrize={setPrize} prizes={prizes} stake={stake} setStake={setStake} fiveCards={fiveCards} createCard={createCard} user={user} setUser={setUser} setButtonTexts={setButtonTexts}/>
         </>
     )
 }

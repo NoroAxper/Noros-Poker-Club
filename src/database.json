@@ -3,7 +3,7 @@
     {
       "username": "noroaxper",
       "password": "hello123",
-      "bank": 400,
+      "bank": 390,
       "id": 1
     }
   ],
@@ -12,313 +12,365 @@
       "value": "A",
       "type": "spade",
       "id": 1,
-      "lock": false
+      "lock": false,
+      "strength": 14
     },
     {
       "value": "2",
       "type": "spade",
       "id": 2,
-      "lock": false
+      "lock": false,
+      "strength": 2
     },
     {
       "value": "3",
       "type": "spade",
       "id": 3,
-      "lock": false
+      "lock": false,
+      "strength": 3
     },
     {
       "value": "4",
       "type": "spade",
       "id": 4,
-      "lock": false
+      "lock": false,
+      "strength": 4
     },
     {
       "value": "5",
       "type": "spade",
       "id": 5,
-      "lock": false
+      "lock": false,
+      "strength": 5
     },
     {
       "value": "6",
       "type": "spade",
       "id": 6,
-      "lock": false
+      "lock": false,
+      "strength": 6
     },
     {
       "value": "7",
       "type": "spade",
       "id": 7,
-      "lock": false
+      "lock": false,
+      "strength": 7
     },
     {
       "value": "8",
       "type": "spade",
       "id": 8,
-      "lock": false
+      "lock": false,
+      "strength": 8
     },
     {
       "value": "9",
       "type": "spade",
       "id": 9,
-      "lock": false
+      "lock": false,
+      "strength": 9
     },
     {
       "value": "10",
       "type": "spade",
       "id": 10,
-      "lock": false
+      "lock": false,
+      "strength": 10
     },
     {
       "value": "J",
       "type": "spade",
       "id": 11,
-      "lock": false
+      "lock": false,
+      "strength": 11
     },
     {
       "value": "Q",
       "type": "spade",
       "id": 12,
-      "lock": false
+      "lock": false,
+      "strength": 12
     },
     {
       "value": "K",
       "type": "spade",
       "id": 13,
-      "lock": false
+      "lock": false,
+      "strength": 13
     },
     {
       "value": "A",
       "type": "heart",
       "id": 14,
-      "lock": false
+      "lock": false,
+      "strength": 14
     },
     {
       "value": "2",
       "type": "heart",
       "id": 15,
-      "lock": false
+      "lock": false,
+      "strength": 2
     },
     {
       "value": "3",
       "type": "heart",
       "id": 16,
-      "lock": false
+      "lock": false,
+      "strength": 3
     },
     {
       "value": "4",
       "type": "heart",
       "id": 17,
-      "lock": false
+      "lock": false,
+      "strength": 4
     },
     {
       "value": "5",
       "type": "heart",
       "id": 18,
-      "lock": false
+      "lock": false,
+      "strength": 5
     },
     {
       "value": "6",
       "type": "heart",
       "id": 19,
-      "lock": false
+      "lock": false,
+      "strength": 6
     },
     {
       "value": "7",
       "type": "heart",
       "id": 20,
-      "lock": false
+      "lock": false,
+      "strength": 7
     },
     {
       "value": "8",
       "type": "heart",
       "id": 21,
-      "lock": false
+      "lock": false,
+      "strength": 8
     },
     {
       "value": "9",
       "type": "heart",
       "id": 22,
-      "lock": false
+      "lock": false,
+      "strength": 9
     },
     {
       "value": "10",
       "type": "heart",
       "id": 23,
-      "lock": false
+      "lock": false,
+      "strength": 10
     },
     {
       "value": "J",
       "type": "heart",
       "id": 24,
-      "lock": false
+      "lock": false,
+      "strength": 11
     },
     {
       "value": "Q",
       "type": "heart",
       "id": 25,
-      "lock": false
+      "lock": false,
+      "strength": 12
     },
     {
       "value": "K",
       "type": "heart",
       "id": 26,
-      "lock": false
+      "lock": false,
+      "strength": 13
     },
     {
       "value": "A",
       "type": "diamond",
       "id": 27,
-      "lock": false
+      "lock": false,
+      "strength": 14
     },
     {
       "value": "2",
       "type": "diamond",
       "id": 28,
-      "lock": false
+      "lock": false,
+      "strength": 2
     },
     {
       "value": "3",
       "type": "diamond",
       "id": 29,
-      "lock": false
+      "lock": false,
+      "strength": 3
     },
     {
       "value": "4",
       "type": "diamond",
       "id": 30,
-      "lock": false
+      "lock": false,
+      "strength": 4
     },
     {
       "value": "5",
       "type": "diamond",
       "id": 31,
-      "lock": false
+      "lock": false,
+      "strength": 5
     },
     {
       "value": "6",
       "type": "diamond",
       "id": 32,
-      "lock": false
+      "lock": false,
+      "strength": 6
     },
     {
       "value": "7",
       "type": "diamond",
       "id": 33,
-      "lock": false
+      "lock": false,
+      "strength": 7
     },
     {
       "value": "8",
       "type": "diamond",
       "id": 34,
-      "lock": false
+      "lock": false,
+      "strength": 8
     },
     {
       "value": "9",
       "type": "diamond",
       "id": 35,
-      "lock": false
+      "lock": false,
+      "strength": 9
     },
     {
       "value": "10",
       "type": "diamond",
       "id": 36,
-      "lock": false
+      "lock": false,
+      "strength": 10
     },
     {
       "value": "J",
       "type": "diamond",
       "id": 37,
-      "lock": false
+      "lock": false,
+      "strength": 11
     },
     {
       "value": "Q",
       "type": "diamond",
       "id": 38,
-      "lock": false
+      "lock": false,
+      "strength": 12
     },
     {
       "value": "K",
       "type": "diamond",
       "id": 39,
-      "lock": false
+      "lock": false,
+      "strength": 13
     },
     {
       "value": "A",
       "type": "club",
       "id": 40,
-      "lock": false
+      "lock": false,
+      "strength": 14
     },
     {
       "value": "2",
       "type": "club",
       "id": 41,
-      "lock": false
+      "lock": false,
+      "strength": 2
     },
     {
       "value": "3",
       "type": "club",
       "id": 42,
-      "lock": false
+      "lock": false,
+      "strength": 3
     },
     {
       "value": "4",
       "type": "club",
       "id": 43,
-      "lock": false
+      "lock": false,
+      "strength": 4
     },
     {
       "value": "5",
       "type": "club",
       "id": 44,
-      "lock": false
+      "lock": false,
+      "strength": 5
     },
     {
       "value": "6",
       "type": "club",
       "id": 45,
-      "lock": false
+      "lock": false,
+      "strength": 6
     },
     {
       "value": "7",
       "type": "club",
       "id": 46,
-      "lock": false
+      "lock": false,
+      "strength": 7
     },
     {
       "value": "8",
       "type": "club",
       "id": 47,
-      "lock": false
+      "lock": false,
+      "strength": 8
     },
     {
       "value": "9",
       "type": "club",
       "id": 48,
-      "lock": false
+      "lock": false,
+      "strength": 9
     },
     {
       "value": "10",
       "type": "club",
       "id": 49,
-      "lock": false
+      "lock": false,
+      "strength": 10
     },
     {
       "value": "J",
       "type": "club",
       "id": 50,
-      "lock": false
+      "lock": false,
+      "strength": 11
     },
     {
       "value": "Q",
       "type": "club",
       "id": 51,
-      "lock": false
+      "lock": false,
+      "strength": 12
     },
     {
       "value": "K",
       "type": "club",
       "id": 52,
-      "lock": false
+      "lock": false,
+      "strength": 13
     }
   ]
 }

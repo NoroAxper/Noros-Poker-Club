@@ -15,6 +15,7 @@ export default function CardDraw ({fiveCards, setFiveCards, setButtonTexts, butt
         return updatedButtonTexts;
       });
     };
+    // USE THIS TO REPLICATE FOR THE HIDDEN CARDS
     const changeLock = (index) => {
         setFiveCards((prevFiveCards) => {
             const updatedFiveCards = [...prevFiveCards];
